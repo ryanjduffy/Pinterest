@@ -1,0 +1,12 @@
+{
+	"id": "com.tiqtech.pinterest",
+	"version":"0.1.0",
+	"vendor":"tiqTech.com",
+	"type":"web",
+	"main":"launch.html",
+	"title":"Pinterest",
+	"uiRevision":"2",
+	"icon":"icon.png",
+	"dockMode":true,
+	"noWindow":true
+}

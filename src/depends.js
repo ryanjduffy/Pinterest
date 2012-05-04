@@ -1,0 +1,4 @@
+enyo.depends(
+	"lib/",
+	"js/"
+);

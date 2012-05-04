@@ -1,0 +1,26 @@
+<html>
+<head>
+	<meta name='viewport' content='height=device-height'>
+	<script src="/dev/enyo/1.0/framework/enyo.js"></script>
+</head>
+<body>	
+	<script>
+		enyo.kind({
+			name:"com.tiqtech.pinterest.Launcher",
+			kind:"Component",
+			components:[
+				{kind:"ApplicationEvents", onLoad:"loaded", onApplicationRelaunch:"loaded"}
+			],
+			loaded:function() {
+				if(enyo.windowParams.dockMode) {
+					enyo.windows.openWindow("dock.html", "dock", {}, {window:"dockMode"});
+				} else {
+					enyo.windows.openWindow("index.html", "card");
+				}
+			}
+		});
+
+		new com.tiqtech.pinterest.Launcher();
+	</script>
+</body>
+</html>

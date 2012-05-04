@@ -1,0 +1,383 @@
+/* General */
+
+.app {
+	position:relative;
+	/*background:url(../image/linen.png) center center;*/
+	background:#383838;
+	font-family: "helvetica neue",arial,sans-serif;
+}
+
+.hbox > * {
+	display:inline-block;
+}
+
+.centered {
+	z-index:500;
+	position:absolute;
+	left:50%;
+	top:50%;
+}
+
+.centered.enyo-spinner-large {
+	margin-top:-64px;
+	margin-left:-64px;
+}
+
+/* Dock View */
+
+.loading {
+	text-align:center;
+	margin-top:100px;
+	color:#fff;
+	font-style:italic;
+	font-size:smaller;
+}
+
+.loading IMG {
+	margin-bottom:1em;
+}
+
+.logo {
+	position:absolute;
+	z-index:500;
+	top:0;
+}
+
+.slide {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	opacity:0;
+	-webkit-transition:opacity 1000ms linear;
+
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.slide.visible {
+	opacity:1;
+	z-index:500;
+}
+
+.slide .info {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	background:url(../image/drawer.png) center top;
+	padding:0.5em;
+	max-height:1.25em;
+	-webkit-transition:all 500ms ease-out;
+
+	font-size: 0.8em;
+	color: #211922;
+}
+
+.slide .info .desc {
+	min-height:1.25em;
+	line-height:1.25em;
+	-white-space:nowrap;
+	-overflow:hidden;
+	-text-overflow:ellipsis;
+}
+
+.slide .info .source {
+	text-align:right;
+	text-decoration:underline;
+}
+
+.slide .info.expanded {
+	max-height:999px;
+}
+
+.slide .info.expanded .desc {
+	-white-space:normal;
+}
+
+.slide .info.expanded .source {
+	visibility:visible;
+}
+
+@media all and (orientation:landscape) {
+	.slide {
+		-webkit-background-size:auto 100%;
+	}
+}
+
+
+@media all and (orientation:portrait) {
+	.slide {
+		-webkit-background-size:100% auto;
+	}
+}
+
+/* Card View */
+
+.extras-accordian-section-header, .header {
+	height:26px;	/* match height of pinterest logo */
+	padding:10px;
+	background:rgba(255,255,255,0.80) url(../image/convexbg.png) center center;
+}
+
+.header {
+	text-align:center;
+}
+
+.no-header .extras-accordian-section-header {
+	display:none;
+}
+
+.header {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	z-index:100;
+}
+
+.header .search-button {
+	position:absolute;
+	right:10px;
+	top:50%;
+	margin-top:-10px;
+}
+
+.spacer {
+	visibility:hidden;
+	height:50px;
+	overflow:hidden;
+}
+
+.query-wrapper.enyo-input.enyo-tool-input {
+	margin:-5px;
+	height:36px;
+}
+
+.search-scope {
+	border-left: 1px dotted #ccc;
+	margin-left: 5px;
+	padding-left: 5px;
+}
+
+.result-thumb {
+    border:4px solid white;
+    border-bottom:0px;
+    height:90px;
+    width:75px;
+    background:#626262 url(../image/p.png) center center no-repeat;
+}
+
+.board-thumb {
+	overflow:hidden;
+	background:#fff;
+	border:4px solid #fff;
+	width:194px;
+	height:127px;
+}
+
+.board-thumb .cover {
+	width:144px;
+	height:107px;
+}
+
+.board-thumb .thumbs > * {
+	width:48px;
+	height:35px;
+	margin:1px;
+	display:block;
+	background:#ccc;
+}
+
+.board-thumb .details {
+	vertical-align:top;
+	font-size:0.75em;
+	padding-left:5px;
+}
+
+.board-thumb .name {
+	font-weight:bold;
+	font-size:0.8em;
+}
+
+.board-thumb .details .desc {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 0.8em;
+}
+
+/* Home */
+
+.popular-pins {
+	position:relative;
+}
+
+.popular-pins .popular-header {
+	font-family:Arial Narrow, Arial;
+	font-size:smaller;
+	font-weight:bold;
+	position:absolute;
+	top:0;
+	left:0;
+	padding:5px;
+	background:rgba(255,255,255,0.5);
+	width:65px;
+	z-index:50;
+}
+
+.popular-scroller {
+	margin-top:5px;
+}
+
+.popular-scroller .popular-spacer {
+	width:75px;
+	height:100%;
+}
+
+.popular-scroller .result-thumb {
+	margin-right:10px;
+}
+
+.user-info {
+	margin:5px;
+	padding:5px;
+	background:#f0f0f0;
+}
+
+.user-info .photo {
+	padding-right:5px;
+	height:50px;
+	width:50px;
+}
+
+.user-info .full-name {
+	font-size:larger;
+	line-height:110%;
+}
+
+.user-info .bio {
+	font-size:smaller;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+.user-info .social > * {
+	font-size:smaller;
+	width:20px;
+}
+
+/* Search */
+
+.result-thumb.more {
+	border-bottom:4px solid white;
+	height:86px;
+	color:#fff;
+    font-weight:bold;
+    font-size:smaller;
+    line-height:75px;
+    text-align:center;
+}
+
+.pin-thumb IMG {
+	height:75px;
+	width:75px;
+}
+
+.pin-thumb .source {
+	background:#fff;
+	height:15px;
+	font-size:0.5em;
+	text-align:right;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+.user-thumb {
+	height:160px;
+	width:125px;
+	background:#fff;
+}
+
+.user-thumb .name {
+	font-size: 0.7em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.user-thumb .extras-fitimage {
+	width:125px;
+	height:125px;
+}
+
+/* Pin View */
+
+.pin-view .counts {
+	display:inline-block;
+}
+
+.pin-view .counts > * {
+	background:url(../image/icons.png) no-repeat;
+	padding-left:15px;
+	margin-right:5px;
+}
+
+.pin-view .counts .comments {
+	background-position:0px 0px;
+}
+
+.pin-view .counts .repins {
+	background-position:0px -12px;
+}
+
+.pin-view .counts .likes {
+	background-position:0px -24px;
+}
+
+/* extras */
+.extras-grid {
+    position:relative
+}
+
+.extras-grid > * {
+    position:absolute;
+    opacity:0;
+}
+
+.extras-grid.animate > * {
+    -webkit-transition:all 400ms ease-out;
+}
+
+.extras-grid > .dragging {
+    opacity:0.5;
+    -webkit-transition:none;
+}
+
+.extras-fitimage {
+	background:#ccc center center no-repeat;
+}
+
+/*
+.pin-thumb .counts > * {
+	display:inline-block;
+	height:12px;
+	font-size:12px;
+	line-height:15px;
+	width:33%;
+	margin:2px 0px 1px 0px;
+	background:url(../image/icons.png) no-repeat;
+}
+
+.pin-thumb .counts .comments {
+	background-position:0px 0px;
+}
+
+.pin-thumb .counts .repins {
+	background-position:0px -12px;
+}
+
+.pin-thumb .counts .likes {
+	background-position:0px -24px;
+}
+*/
