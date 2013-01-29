@@ -35,7 +35,7 @@ enyo.kind({
 		this.inherited(arguments);
 
 		this.userRetryCount = 0;
-		enyo.asyncMethod(this, "getUser", "thisduffygirl");
+		enyo.asyncMethod(this, "getUser", "<Pinterest User Name ...>");
 		this.history = [];
 	},
 	navigate:function(view, param) {
